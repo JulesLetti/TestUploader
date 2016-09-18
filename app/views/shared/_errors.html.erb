@@ -1,0 +1,25 @@
+<div class ='body' {
+  padding-top: 200px;
+  background-color: lightgrey;
+}>
+
+<div class='row'>
+      <h1><font color=#2A3944></h1>
+    <div class='col-md-4 col-md-offset-4'>
+      <h1><font color=lightgrey></h1>
+        <br>
+    </div>
+
+<% if object.errors.any? %>
+  <div class="panel panel-warning errors">
+    <div class="panel-heading">
+      <h5><i class="glyphicon glyphicon-exclamation-sign"></i> Found errors while saving</h5>
+    </div>
+
+    <ul class="panel-body">
+      <% object.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>

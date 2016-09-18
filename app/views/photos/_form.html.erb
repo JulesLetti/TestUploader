@@ -1,0 +1,50 @@
+<div class ='body' {
+  padding-top: 200px;
+  background-color: lightgrey;
+}>
+
+<div class='row'>
+    <div class='col-md-6 col-md-offset-3'>
+
+    </div>
+
+<div class='row'>
+
+    <div class='col-md-4 col-md-offset-4'>
+        <div class='panel panel-default'>
+          <div class='panel-heading'>
+            <h2 class='panel-title'>Upload your video</h2>
+        </div>
+          <div class='panel-body'>
+          <%= simple_form_for(@photo) do |f| %>
+            <%= render 'shared/errors', object: @photo %>
+
+            <div class='col-md-0 col-md-offset-1'>
+            <h1><font color=black></h1>
+            <p style="text-align:left"><br>
+              <%= f.input :email, label: 'Enter your email', :input_html => {:maxlength =>500,:style=> 'width: 380px'}%>
+               <br>
+                <br>
+              <%= f.label :style, label: 'Choose your style'  %>
+
+              <%= f.collection_radio_buttons(:title, [['Modern Art', 'Modern Art'], ['Munch', 'Munch'], ['Picasso', 'Picasso'], ['Black and White', 'Black and White']],
+              :first, :last,
+              :item_wrapper_class => 'radio-inline',
+              ) { |title| title.label { title.radio_button + " " + image_tag("#{title.text}.jpg", :size => "60x50")}} %>
+
+              <br>
+              <br>
+                <br>
+              <%= f.label :video, label: 'Upload your video' %>
+              <%= f.file_field :image, :input_html => {:maxlength =>500,:style=> 'width: 400px'}%>
+
+<br>
+  </div>
+<br>
+  <br>
+  <div class="form-actions">
+      <div class='col-md-0 col-md-offset-1'>
+    <%= f.submit 'Upload', class: 'btn btn-success' %>
+  </div>
+  <% end %>
+  </div>
