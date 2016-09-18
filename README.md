@@ -1,24 +1,10 @@
-# README
+to get in running:
+cd testuploader
+rails s
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+-> testuploader in the name of the app file and rails s should get the server running. I can then see the page under localhost3000
+-> Please not that is still not optimal (like no message that upload was successful etc) but it uploads everything to s3 and create a database with Email, Style, Video URL
 
-Things you may want to cover:
+That is the status so far. The cool thing is that the video can be process in any file type that we want and size etc could all be set.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Julia
